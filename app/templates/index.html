@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AudioTranscribe - UPDATED</title>
+    <!-- LIVERELOAD SCRIPT -->
+    <script src="http://localhost:8097"></script>
+    <!-- END LIVERELOAD SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .left-panel {
+            flex: 1;
+            min-width: 300px;
+            padding-right: 20px;
+        }
+        .right-panel {
+            flex: 2;
+            min-width: 400px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        .progress {
+            height: 20px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+            box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+        }
+        .progress-bar {
+            float: left;
+            width: 0%;
+            height: 100%;
+            font-size: 12px;
+            line-height: 20px;
+            color: #fff;
+            text-align: center;
+            background-color: #337ab7;
+            box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+            transition: width .6s ease;
+        }
+        .card {
+            border: 1px solid #eee;
+            border-radius: 4px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+        }
+        .transcript-segment {
+            margin-bottom: 10px;
+            padding: 8px;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+        .transcript-segment:hover {
+            background-color: #f0f0f0;
+        }
+        .speaker {
+            font-weight: bold;
+        }
+        .timestamp {
+            color: #777;
+            font-size: 0.9em;
+        }
+        .speaker-editor {
+            margin-top: 20px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        .speaker-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 8px;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+        .speaker-name {
+            flex-grow: 1;
+            margin-right: 10px;
+        }
+        .alert {
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        .alert-success {
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+            color: #155724;
+        }
+        .alert-danger {
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+            color: #721c24;
+        }
+        .alert-warning {
+            background-color: #fff3cd;
+            border-color: #ffeeba;
+            color: #856404;
+        }
+        .alert-info {
+            background-color: #d1ecf1;
+            border-color: #bee5eb;
+            color: #0c5460;
+        }
+        .job-list {
+            max-height: 500px;
+            overflow-y: auto;
+            margin-top: 20px;
+        }
+        .job-item {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+        }
+        .job-item:hover {
+            background-color: #f5f5f5;
+        }
+        .job-id {
+            font-size: 0.8em;
+            color: #777;
+        }
+        .job-time {
+            font-size: 0.8em;
+            color: #777;
+        }
+        .nav-tabs {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .nav-tab {
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+        .nav-tab.active {
+            border: 1px solid #ddd;
+            border-bottom-color: transparent;
+            border-radius: 4px 4px 0 0;
+            background-color: white;
+        }
+        .tab-content {
+            margin-top: 20px;
+        }
+        .backend-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            margin-left: 5px;
+        }
+        .badge-real {
+            background-color: #28a745;
+            color: white;
+        }
+        .badge-mock {
+            background-color: #ffc107;
+            color: #212529;
+        }
+        .badge-unavailable {
+            background-color: #dc3545;
+            color: white;
+        }
+        .system-status {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 4px;
+            background-color: #f8f9fa;
+        }
+        .status-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .status-label {
+            width: 150px;
+            font-weight: bold;
+        }
+        .status-value {
+            flex-grow: 1;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .left-panel, .right-panel {
+                width: 100%;
+                padding-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    {% raw %}
+    <div id="app">
+        <h1>AudioTranscribe</h1>
+        <p>Upload audio files for speaker-aware transcription</p>
+        
+        <div class="system-status" v-if="backendStatusLoaded">
+            <h3>System Status</h3>
+            <div class="status-item">
+                <div class="status-label">Transcription:</div>
+                <div class="status-value">
+                    <span v-for="backend in transcriptionBackends" :key="backend.id">
+                        {{ backend.name }}: 
+                        <span class="backend-badge" :class="'badge-' + backend.status">
+                            {{ backend.status }}
+                        </span>
+                        &nbsp;
+                    </span>
+                </div>
+            </div>
+            <div class="status-item">
+                <div class="status-label">Speaker Diarization:</div>
+                <div class="status-value">
+                    <span v-for="backend in diarizationBackends" :key="backend.id">
+                        {{ backend.name }}: 
+                        <span class="backend-badge" :class="'badge-' + backend.status">
+                            {{ backend.status }}
+                        </span>
+                        &nbsp;
+                    </span>
+                </div>
+            </div>
+            <div class="alert alert-info" v-if="hasMockBackends">
+                <strong>Note:</strong> Some backends are running in mock mode. This means the real libraries are not installed, but the system is using fallback implementations for demonstration purposes.
+                <div v-if="!hasRealBackends">Please install at least one real transcription and diarization backend for proper functionality.</div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="left-panel">
+                <div class="nav-tabs">
+                    <div class="nav-tab" :class="{ active: activeTab === 'upload' }" @click="activeTab = 'upload'">Upload</div>
+                    <div class="nav-tab" :class="{ active: activeTab === 'jobs' }" @click="activeTab = 'jobs'">Recent Jobs</div>
+                    <div class="nav-tab" :class="{ active: activeTab === 'speakers' }" @click="activeTab = 'speakers'">Speakers</div>
+                </div>
+                
+                <div v-if="activeTab === 'upload'" class="tab-content">
+                    <div class="alert alert-success" v-if="successMessage">
+                        {{ successMessage }}
+                    </div>
+                    <div class="alert alert-danger" v-if="errorMessage">
+                        {{ errorMessage }}
+                    </div>
+                    
+                    <form @submit.prevent="uploadFile">
+                        <div class="form-group">
+                            <label for="audioFile">Audio File</label>
+                            <input type="file" id="audioFile" ref="audioFile" @change="handleFileChange" :disabled="isProcessing">
+                            <small>Supported formats: WAV, MP3, FLAC, OGG, M4A (Max: {{ maxUploadSize }}MB)</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="modelSize">Transcription Model Size</label>
+                            <select id="modelSize" v-model="modelSize" :disabled="isProcessing">
+                                <option value="tiny">Tiny (fastest, least accurate)</option>
+                                <option value="base">Base (fast, decent accuracy)</option>
+                                <option value="small">Small (balanced)</option>
+                                <option value="medium">Medium (slower, more accurate)</option>
+                                <option value="large">Large (slowest, most accurate)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="transcriptionBackend">Transcription Backend</label>
+                            <select id="transcriptionBackend" v-model="transcriptionBackend" :disabled="isProcessing">
+                                <option v-for="backend in transcriptionBackends" :key="backend.id" :value="backend.id" :disabled="!backend.available">
+                                    {{ backend.name }} 
+                                    <span v-if="backend.status === 'real'">(real)</span>
+                                    <span v-else-if="backend.status === 'mock'">(mock)</span>
+                                    <span v-else>(not available)</span>
+                                </option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="diarizationBackend">Speaker Diarization Backend</label>
+                            <select id="diarizationBackend" v-model="diarizationBackend" :disabled="isProcessing">
+                                <option v-for="backend in diarizationBackends" :key="backend.id" :value="backend.id" :disabled="!backend.available">
+                                    {{ backend.name }}
+                                    <span v-if="backend.status === 'real'">(real)</span>
+                                    <span v-else-if="backend.status === 'mock'">(mock)</span>
+                                    <span v-else>(not available)</span>
+                                </option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" :disabled="!file || isProcessing">
+                            <span v-if="isProcessing">Processing...</span>
+                            <span v-else>Upload & Transcribe</span>
+                        </button>
+                    </form>
+                    
+                    <div class="progress" v-if="isProcessing">
+                        <div class="progress-bar" :style="{ width: uploadProgress + '%' }"></div>
+                    </div>
+                </div>
+                
+                <div v-if="activeTab === 'jobs'" class="tab-content">
+                    <h3>Recent Transcription Jobs</h3>
+                    <div class="job-list">
+                        <div class="job-item" v-for="job in jobs" :key="job.id" @click="loadJob(job.id)">
+                            <div>{{ getFileName(job.file_path) }}</div>
+                            <div class="job-time">{{ formatDate(job.timestamp) }}</div>
+                            <div class="job-id">Status: {{ job.state }}</div>
+                        </div>
+                        <div v-if="jobs.length === 0">No transcription jobs found.</div>
+                    </div>
+                </div>
+                
+                <div v-if="activeTab === 'speakers'" class="tab-content">
+                    <h3>Known Speakers</h3>
+                    <div v-if="speakers.length === 0">No speakers stored yet.</div>
+                    <div v-else>
+                        <div class="speaker-item" v-for="speaker in speakers" :key="speaker.id">
+                            <div class="speaker-name">{{ speaker.name }}</div>
+                            <button @click="editSpeaker(speaker)" class="btn-edit">Edit</button>
+                        </div>
+                    </div>
+                    
+                    <div v-if="editingSpeaker" class="speaker-editor">
+                        <h4>Edit Speaker</h4>
+                        <div class="form-group">
+                            <label>Speaker Name</label>
+                            <input type="text" v-model="editingSpeaker.name">
+                        </div>
+                        <button @click="saveSpeaker">Save</button>
+                        <button @click="cancelEdit" style="background-color: #777;">Cancel</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-panel">
+                <div v-if="currentJob">
+                    <h3>Transcript: {{ getFileName(currentJob.file_path) }}</h3>
+                    
+                    <div v-if="currentJob.state === 'failed'" class="alert alert-danger">
+                        <strong>Processing failed:</strong> {{ currentJob.error }}
+                    </div>
+                    
+                    <div v-if="currentJob.state === 'completed'">
+                        <div class="transcript-controls">
+                            <a :href="'/download/' + currentJob.id + '/html'" target="_blank" class="btn">View Full HTML</a>
+                            <a :href="'/download/' + currentJob.id + '/json'" class="btn">Download JSON</a>
+                            <a :href="'/download/' + currentJob.id + '/srt'" class="btn">Download SRT</a>
+                        </div>
+                        
+                        <div class="transcript-container">
+                            <div class="transcript-segment" v-for="segment in currentJob.segments" :key="segment.start">
+                                <div class="timestamp">{{ segment.formatted_start }} - {{ segment.formatted_end }}</div>
+                                <div>
+                                    <span class="speaker">{{ segment.speaker }}:</span>
+                                    {{ segment.text }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div v-if="currentJob.state === 'processing'" class="processing-indicator">
+                        <p>Processing... Please wait.</p>
+                    </div>
+                </div>
+                
+                <div v-else class="placeholder">
+                    <p>Upload a file or select a job to view its transcript.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endraw %}
+    
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                activeTab: 'upload',
+                file: null,
+                modelSize: '{{ default_model_size }}',
+                transcriptionBackend: '{{ default_transcription_backend }}',
+                diarizationBackend: '{{ default_diarization_backend }}',
+                transcriptionBackends: {{ transcription_backends|tojson }},
+                diarizationBackends: {{ diarization_backends|tojson }},
+                isProcessing: false,
+                uploadProgress: 0,
+                successMessage: '',
+                errorMessage: '',
+                currentJob: null,
+                jobs: [],
+                speakers: [],
+                editingSpeaker: null,
+                maxUploadSize: '{{ max_upload_size }}',
+                pollingInterval: null,
+                backendStatusLoaded: true,
+                hasMockBackends: false,
+                hasRealBackends: false
+            },
+            mounted() {
+                this.loadJobs();
+                this.loadSpeakers();
+                this.checkBackendStatus();
+            },
+            methods: {
+                checkBackendStatus() {
+                    // Update the state based on the backend data
+                    this.hasMockBackends = this.transcriptionBackends.some(b => b.status === 'mock') || 
+                                           this.diarizationBackends.some(b => b.status === 'mock');
+                    
+                    this.hasRealBackends = this.transcriptionBackends.some(b => b.status === 'real') && 
+                                           this.diarizationBackends.some(b => b.status === 'real');
+                    
+                    // Also fetch from API to get latest status
+                    axios.get('/api/backend-status')
+                        .then(response => {
+                            if (response.data.success) {
+                                // Update transcription backends
+                                for (const [key, info] of Object.entries(response.data.transcription_backends)) {
+                                    const index = this.transcriptionBackends.findIndex(b => b.id === key);
+                                    if (index !== -1) {
+                                        this.transcriptionBackends[index].available = info.available;
+                                        this.transcriptionBackends[index].real_available = info.real_available;
+                                        this.transcriptionBackends[index].status = info.real_available ? 'real' : 
+                                                                                  info.available ? 'mock' : 'unavailable';
+                                    }
+                                }
+                                
+                                // Update diarization backends
+                                for (const [key, info] of Object.entries(response.data.diarization_backends)) {
+                                    const index = this.diarizationBackends.findIndex(b => b.id === key);
+                                    if (index !== -1) {
+                                        this.diarizationBackends[index].available = info.available;
+                                        this.diarizationBackends[index].real_available = info.real_available;
+                                        this.diarizationBackends[index].status = info.real_available ? 'real' : 
+                                                                               info.available ? 'mock' : 'unavailable';
+                                    }
+                                }
+                                
+                                // Check if we have any mock backends
+                                this.hasMockBackends = Object.values(response.data.transcription_backends).some(b => b.available && !b.real_available) || 
+                                                     Object.values(response.data.diarization_backends).some(b => b.available && !b.real_available);
+                                
+                                // Check if we have any real backends
+                                this.hasRealBackends = Object.values(response.data.transcription_backends).some(b => b.real_available) && 
+                                                     Object.values(response.data.diarization_backends).some(b => b.real_available);
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error fetching backend status:', error);
+                        });
+                },
+                handleFileChange(event) {
+                    this.file = event.target.files[0];
+                    this.successMessage = '';
+                    this.errorMessage = '';
+                },
+                uploadFile() {
+                    if (!this.file) return;
+                    
+                    const formData = new FormData();
+                    formData.append('file', this.file);
+                    formData.append('model_size', this.modelSize);
+                    formData.append('transcription_backend', this.transcriptionBackend);
+                    formData.append('diarization_backend', this.diarizationBackend);
+                    
+                    this.isProcessing = true;
+                    this.uploadProgress = 0;
+                    this.successMessage = '';
+                    this.errorMessage = '';
+                    
+                    axios.post('/upload', formData, {
+                        headers: {
+                            'Content-Type': 'multipart/form-data'
+                        },
+                        onUploadProgress: (progressEvent) => {
+                            this.uploadProgress = Math.round((progressEvent.loaded * 100) / progressEvent.total);
+                        }
+                    })
+                    .then(response => {
+                        this.isProcessing = false;
+                        this.successMessage = response.data.message;
+                        this.loadJobs();
+                        
+                        // Start polling for job status if processing async
+                        if (response.data.job && response.data.job.state === 'processing') {
+                            this.currentJob = response.data.job;
+                            this.startPolling(response.data.job.id);
+                        } else if (response.data.job) {
+                            this.currentJob = response.data.job;
+                        }
+                    })
+                    .catch(error => {
+                        this.isProcessing = false;
+                        this.errorMessage = error.response?.data?.message || 'An error occurred during upload';
+                    });
+                },
+                loadJobs() {
+                    axios.get('/api/jobs')
+                        .then(response => {
+                            this.jobs = response.data.jobs;
+                        })
+                        .catch(error => {
+                            console.error('Error loading jobs:', error);
+                        });
+                },
+                loadJob(jobId) {
+                    axios.get(`/api/jobs/${jobId}`)
+                        .then(response => {
+                            this.currentJob = response.data.job;
+                            
+                            // Start polling if job is still processing
+                            if (this.currentJob.state === 'processing') {
+                                this.startPolling(jobId);
+                            } else {
+                                this.stopPolling();
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error loading job:', error);
+                        });
+                },
+                startPolling(jobId) {
+                    this.stopPolling(); // Clear any existing polling
+                    
+                    this.pollingInterval = setInterval(() => {
+                        axios.get(`/api/jobs/${jobId}`)
+                            .then(response => {
+                                this.currentJob = response.data.job;
+                                
+                                // Stop polling when job is no longer processing
+                                if (this.currentJob.state !== 'processing') {
+                                    this.stopPolling();
+                                }
+                            })
+                            .catch(error => {
+                                console.error('Error polling job status:', error);
+                                this.stopPolling();
+                            });
+                    }, 5000); // Poll every 5 seconds
+                },
+                stopPolling() {
+                    if (this.pollingInterval) {
+                        clearInterval(this.pollingInterval);
+                        this.pollingInterval = null;
+                    }
+                },
+                loadSpeakers() {
+                    axios.get('/api/speakers')
+                        .then(response => {
+                            this.speakers = response.data.speakers;
+                        })
+                        .catch(error => {
+                            console.error('Error loading speakers:', error);
+                        });
+                },
+                editSpeaker(speaker) {
+                    this.editingSpeaker = {...speaker};
+                },
+                saveSpeaker() {
+                    if (!this.editingSpeaker) return;
+                    
+                    axios.post(`/api/speakers/${this.editingSpeaker.id}/rename`, {
+                        new_name: this.editingSpeaker.name
+                    })
+                    .then(response => {
+                        this.loadSpeakers();
+                        this.editingSpeaker = null;
+                    })
+                    .catch(error => {
+                        console.error('Error saving speaker:', error);
+                    });
+                },
+                cancelEdit() {
+                    this.editingSpeaker = null;
+                },
+                getFileName(path) {
+                    if (!path) return '';
+                    return path.split('/').pop();
+                },
+                formatDate(isoDate) {
+                    if (!isoDate) return '';
+                    const date = new Date(isoDate);
+                    return date.toLocaleString();
+                }
+            },
+            beforeDestroy() {
+                this.stopPolling();
+            }
+        });
+    </script>
+</body>
+</html>

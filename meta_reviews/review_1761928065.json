@@ -1,0 +1,232 @@
+{
+  "timestamp": "2025-11-01T02:27:45.426000",
+  "review_result": {
+    "dimensional_results": {
+      "accuracy": {
+        "score": 0.5,
+        "issues_count": 1,
+        "recommendations_count": 0
+      },
+      "robustness": {
+        "score": 0.6125,
+        "issues_count": 5,
+        "recommendations_count": 5
+      },
+      "efficiency": {
+        "score": 0.64624,
+        "issues_count": 2,
+        "recommendations_count": 1
+      }
+    },
+    "meta_analysis": {
+      "overall_health": 0.5862466666666667,
+      "critical_issues": [
+        {
+          "dimension": "efficiency",
+          "issue": {
+            "type": "low_efficiency",
+            "metric": "cpu_utilization",
+            "value": 0.23119999999999996,
+            "threshold": 0.75,
+            "severity": "high"
+          }
+        },
+        {
+          "dimension": "efficiency",
+          "issue": {
+            "type": "low_efficiency",
+            "metric": "throughput",
+            "value": 0.4,
+            "threshold": 0.8,
+            "severity": "high"
+          }
+        }
+      ],
+      "improvement_priorities": [
+        {
+          "dimension": "efficiency",
+          "issue": {
+            "type": "low_efficiency",
+            "metric": "cpu_utilization",
+            "value": 0.23119999999999996,
+            "threshold": 0.75,
+            "severity": "high"
+          },
+          "priority_score": 0.4,
+          "priority_level": "low"
+        },
+        {
+          "dimension": "efficiency",
+          "issue": {
+            "type": "low_efficiency",
+            "metric": "throughput",
+            "value": 0.4,
+            "threshold": 0.8,
+            "severity": "high"
+          },
+          "priority_score": 0.4,
+          "priority_level": "low"
+        },
+        {
+          "dimension": "accuracy",
+          "issue": {
+            "type": "review_error",
+            "error": "'confidence'"
+          },
+          "priority_score": 0.35,
+          "priority_level": "low"
+        },
+        {
+          "dimension": "robustness",
+          "issue": {
+            "type": "low_robustness",
+            "metric": "noise_robustness",
+            "value": 0.6,
+            "threshold": 0.7,
+            "severity": "medium"
+          },
+          "priority_score": 0.315,
+          "priority_level": "low"
+        },
+        {
+          "dimension": "robustness",
+          "issue": {
+            "type": "low_robustness",
+            "metric": "speed_robustness",
+            "value": 0.7,
+            "threshold": 0.75,
+            "severity": "medium"
+          },
+          "priority_score": 0.315,
+          "priority_level": "low"
+        },
+        {
+          "dimension": "robustness",
+          "issue": {
+            "type": "low_robustness",
+            "metric": "accent_robustness",
+            "value": 0.5,
+            "threshold": 0.65,
+            "severity": "medium"
+          },
+          "priority_score": 0.315,
+          "priority_level": "low"
+        },
+        {
+          "dimension": "robustness",
+          "issue": {
+            "type": "low_robustness",
+            "metric": "domain_robustness",
+            "value": 0.65,
+            "threshold": 0.7,
+            "severity": "medium"
+          },
+          "priority_score": 0.315,
+          "priority_level": "low"
+        },
+        {
+          "dimension": "robustness",
+          "issue": {
+            "type": "low_robustness",
+            "metric": "overall_robustness",
+            "value": 0.6125,
+            "threshold": 0.7,
+            "severity": "medium"
+          },
+          "priority_score": 0.315,
+          "priority_level": "low"
+        }
+      ],
+      "meta_recommendations": [
+        {
+          "priority": "critical",
+          "action": "Comprehensive system overhaul and retraining",
+          "expected_improvement": "30-50% overall improvement",
+          "implementation_effort": "high",
+          "timeline": "8-12 weeks"
+        }
+      ],
+      "system_maturity": "early_stage"
+    },
+    "improvement_plan": {
+      "recommendations_count": 8,
+      "timeline": {
+        "immediate": [
+          {
+            "priority": "medium",
+            "action": "Add noise augmentation to training data",
+            "expected_improvement": "15-25% noise robustness",
+            "implementation_effort": "low",
+            "timeline": "1-2 weeks"
+          },
+          {
+            "priority": "medium",
+            "action": "Implement structured recommendation templates",
+            "expected_improvement": "More actionable recommendations",
+            "timeline": "1-2 weeks"
+          }
+        ],
+        "short_term": [],
+        "medium_term": [],
+        "long_term": [
+          {
+            "priority": "critical",
+            "action": "Comprehensive system overhaul and retraining",
+            "expected_improvement": "30-50% overall improvement",
+            "implementation_effort": "high",
+            "timeline": "8-12 weeks"
+          },
+          {
+            "priority": "high",
+            "action": "Implement advanced noise reduction preprocessing",
+            "expected_improvement": "20-30% noise robustness",
+            "implementation_effort": "medium",
+            "timeline": "3-4 weeks"
+          },
+          {
+            "priority": "high",
+            "action": "Expand training data with diverse accents",
+            "expected_improvement": "25-40% accent robustness",
+            "implementation_effort": "high",
+            "timeline": "6-8 weeks"
+          },
+          {
+            "priority": "medium",
+            "action": "Implement speed normalization preprocessing",
+            "expected_improvement": "10-20% speed robustness",
+            "implementation_effort": "medium",
+            "timeline": "2-3 weeks"
+          },
+          {
+            "priority": "medium",
+            "action": "Implement domain adaptation techniques",
+            "expected_improvement": "15-30% domain robustness",
+            "implementation_effort": "medium",
+            "timeline": "4-5 weeks"
+          },
+          {
+            "priority": "medium",
+            "action": "Add GPU acceleration support",
+            "expected_improvement": "5-10x performance on GPU systems",
+            "implementation_effort": "medium",
+            "timeline": "4-5 weeks"
+          }
+        ]
+      },
+      "resource_requirements": {
+        "total_effort_weeks": 19,
+        "effort_distribution": {
+          "low": 1,
+          "medium": 5,
+          "high": 2
+        },
+        "estimated_team_size": 2,
+        "required_skills": [
+          "ML engineering",
+          "Python development",
+          "System optimization"
+        ]
+      }
+    }
+  }
+}

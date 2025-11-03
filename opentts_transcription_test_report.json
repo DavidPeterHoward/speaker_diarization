@@ -1,0 +1,4800 @@
+{
+  "timestamp": 1761953948.7915416,
+  "test_summary": {
+    "total_test_cases": 80,
+    "iterations_completed": 2,
+    "average_accuracy": 1.0,
+    "accuracy_std_dev": 0.0,
+    "successful_transcriptions": 80,
+    "failed_transcriptions": 0
+  },
+  "performance_analysis": {
+    "category_performance": {
+      "simple_sentences": {
+        "average_accuracy": 1.0,
+        "test_count": 20,
+        "std_dev": 0.0
+      },
+      "technical_terms": {
+        "average_accuracy": 1.0,
+        "test_count": 20,
+        "std_dev": 0.0
+      },
+      "numbers_dates": {
+        "average_accuracy": 1.0,
+        "test_count": 20,
+        "std_dev": 0.0
+      },
+      "foreign_words": {
+        "average_accuracy": 1.0,
+        "test_count": 20,
+        "std_dev": 0.0
+      }
+    },
+    "voice_performance": {
+      "opentts_espeak_en_us_female": {
+        "average_accuracy": 1.0,
+        "test_count": 40
+      },
+      "opentts_espeak_en_us_male": {
+        "average_accuracy": 1.0,
+        "test_count": 40
+      }
+    }
+  },
+  "failure_analysis": {
+    "total_failures": 0,
+    "failure_rate": 0.0,
+    "failures_by_category": {},
+    "common_error_patterns": []
+  },
+  "improvement_recommendations": [],
+  "feedback_history": [
+    {
+      "iteration": 0,
+      "results": [
+        {
+          "category": "simple_sentences",
+          "text": "Hello world, this is a test.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "Hello world, this is a test.",
+          "audio_path": "generated_audio\\iter_0_case_0.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_0.wav",
+            "job": {
+              "id": "mock-7483",
+              "file_path": "generated_audio\\iter_0_case_0.wav",
+              "file_hash": "-8062676637869722517",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:37:54.804665",
+              "output_path": "/mock/transcript_-8062676637869722517.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "Hello world,",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "this is",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "a test.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "Hello world, this is a test.",
+          "iteration": 0
+        },
+        {
+          "category": "simple_sentences",
+          "text": "Hello world, this is a test.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "Hello world, this is a test.",
+          "audio_path": "generated_audio\\iter_0_case_1.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_1.wav",
+            "job": {
+              "id": "mock-76",
+              "file_path": "generated_audio\\iter_0_case_1.wav",
+              "file_hash": "5833132390397760076",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:37:55.656381",
+              "output_path": "/mock/transcript_5833132390397760076.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "Hello world,",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "this is",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "a test.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "Hello world, this is a test.",
+          "iteration": 0
+        },
+        {
+          "category": "simple_sentences",
+          "text": "The quick brown fox jumps over the lazy dog.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "The quick brown fox jumps over the lazy dog.",
+          "audio_path": "generated_audio\\iter_0_case_2.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_2.wav",
+            "job": {
+              "id": "mock-911",
+              "file_path": "generated_audio\\iter_0_case_2.wav",
+              "file_hash": "-9018561078918849089",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:37:57.151186",
+              "output_path": "/mock/transcript_-9018561078918849089.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.5,
+                  "text": "The quick brown",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.5,
+                  "end": 3.0,
+                  "text": "fox jumps over",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 4.5,
+                  "text": "the lazy dog.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "The quick brown fox jumps over the lazy dog.",
+          "iteration": 0
+        },
+        {
+          "category": "simple_sentences",
+          "text": "The quick brown fox jumps over the lazy dog.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "The quick brown fox jumps over the lazy dog.",
+          "audio_path": "generated_audio\\iter_0_case_3.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_3.wav",
+            "job": {
+              "id": "mock-9221",
+              "file_path": "generated_audio\\iter_0_case_3.wav",
+              "file_hash": "8395821221749019221",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:37:58.208990",
+              "output_path": "/mock/transcript_8395821221749019221.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.5,
+                  "text": "The quick brown",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.5,
+                  "end": 3.0,
+                  "text": "fox jumps over",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 4.5,
+                  "text": "the lazy dog.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "The quick brown fox jumps over the lazy dog.",
+          "iteration": 0
+        },
+        {
+          "category": "simple_sentences",
+          "text": "How are you doing today?",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "How are you doing today?",
+          "audio_path": "generated_audio\\iter_0_case_4.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_4.wav",
+            "job": {
+              "id": "mock-9496",
+              "file_path": "generated_audio\\iter_0_case_4.wav",
+              "file_hash": "456331111267089496",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:37:58.907345",
+              "output_path": "/mock/transcript_456331111267089496.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.5,
+                  "text": "How",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 0.5,
+                  "end": 1.0,
+                  "text": "are",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 1.5,
+                  "text": "you",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.5,
+                  "end": 2.0,
+                  "text": "doing",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 2.5,
+                  "text": "today?",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "How are you doing today?",
+          "iteration": 0
+        },
+        {
+          "category": "simple_sentences",
+          "text": "How are you doing today?",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "How are you doing today?",
+          "audio_path": "generated_audio\\iter_0_case_5.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_5.wav",
+            "job": {
+              "id": "mock-4682",
+              "file_path": "generated_audio\\iter_0_case_5.wav",
+              "file_hash": "8874419117789024682",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:37:59.753022",
+              "output_path": "/mock/transcript_8874419117789024682.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.5,
+                  "text": "How",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 0.5,
+                  "end": 1.0,
+                  "text": "are",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 1.5,
+                  "text": "you",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.5,
+                  "end": 2.0,
+                  "text": "doing",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 2.5,
+                  "text": "today?",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "How are you doing today?",
+          "iteration": 0
+        },
+        {
+          "category": "simple_sentences",
+          "text": "I am testing speech recognition software.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "I am testing speech recognition software.",
+          "audio_path": "generated_audio\\iter_0_case_6.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_6.wav",
+            "job": {
+              "id": "mock-8764",
+              "file_path": "generated_audio\\iter_0_case_6.wav",
+              "file_hash": "-3032558612310151236",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:00.767252",
+              "output_path": "/mock/transcript_-3032558612310151236.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "I am",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "testing speech",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "recognition software.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "I am testing speech recognition software.",
+          "iteration": 0
+        },
+        {
+          "category": "simple_sentences",
+          "text": "I am testing speech recognition software.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "I am testing speech recognition software.",
+          "audio_path": "generated_audio\\iter_0_case_7.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_7.wav",
+            "job": {
+              "id": "mock-7665",
+              "file_path": "generated_audio\\iter_0_case_7.wav",
+              "file_hash": "-5133217126057582335",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:01.596785",
+              "output_path": "/mock/transcript_-5133217126057582335.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "I am",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "testing speech",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "recognition software.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "I am testing speech recognition software.",
+          "iteration": 0
+        },
+        {
+          "category": "simple_sentences",
+          "text": "Please transcribe this audio correctly.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "Please transcribe this audio correctly.",
+          "audio_path": "generated_audio\\iter_0_case_8.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_8.wav",
+            "job": {
+              "id": "mock-8045",
+              "file_path": "generated_audio\\iter_0_case_8.wav",
+              "file_hash": "-5753976393631331955",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:02.687886",
+              "output_path": "/mock/transcript_-5753976393631331955.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.5,
+                  "text": "Please",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 0.5,
+                  "end": 1.0,
+                  "text": "transcribe",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 1.5,
+                  "text": "this",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.5,
+                  "end": 2.0,
+                  "text": "audio",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 2.5,
+                  "text": "correctly.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "Please transcribe this audio correctly.",
+          "iteration": 0
+        },
+        {
+          "category": "simple_sentences",
+          "text": "Please transcribe this audio correctly.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "Please transcribe this audio correctly.",
+          "audio_path": "generated_audio\\iter_0_case_9.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_9.wav",
+            "job": {
+              "id": "mock-4599",
+              "file_path": "generated_audio\\iter_0_case_9.wav",
+              "file_hash": "8404663029724424599",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:03.597267",
+              "output_path": "/mock/transcript_8404663029724424599.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.5,
+                  "text": "Please",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 0.5,
+                  "end": 1.0,
+                  "text": "transcribe",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 1.5,
+                  "text": "this",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.5,
+                  "end": 2.0,
+                  "text": "audio",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 2.5,
+                  "text": "correctly.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "Please transcribe this audio correctly.",
+          "iteration": 0
+        },
+        {
+          "category": "technical_terms",
+          "text": "Machine learning algorithms optimize neural network parameters.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "Machine learning algorithms optimize neural network parameters.",
+          "audio_path": "generated_audio\\iter_0_case_10.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_10.wav",
+            "job": {
+              "id": "mock-3575",
+              "file_path": "generated_audio\\iter_0_case_10.wav",
+              "file_hash": "6123088993586313575",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:04.575159",
+              "output_path": "/mock/transcript_6123088993586313575.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "Machine learning",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "algorithms optimize",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "neural network",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 3.5,
+                  "text": "parameters.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "Machine learning algorithms optimize neural network parameters.",
+          "iteration": 0
+        },
+        {
+          "category": "technical_terms",
+          "text": "Machine learning algorithms optimize neural network parameters.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "Machine learning algorithms optimize neural network parameters.",
+          "audio_path": "generated_audio\\iter_0_case_11.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_11.wav",
+            "job": {
+              "id": "mock-8379",
+              "file_path": "generated_audio\\iter_0_case_11.wav",
+              "file_hash": "6907333193790788379",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:05.742588",
+              "output_path": "/mock/transcript_6907333193790788379.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "Machine learning",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "algorithms optimize",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "neural network",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 3.5,
+                  "text": "parameters.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "Machine learning algorithms optimize neural network parameters.",
+          "iteration": 0
+        },
+        {
+          "category": "technical_terms",
+          "text": "Quantum computing leverages superposition and entanglement.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "Quantum computing leverages superposition and entanglement.",
+          "audio_path": "generated_audio\\iter_0_case_12.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_12.wav",
+            "job": {
+              "id": "mock-261",
+              "file_path": "generated_audio\\iter_0_case_12.wav",
+              "file_hash": "7950755984340680261",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:07.109464",
+              "output_path": "/mock/transcript_7950755984340680261.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "Quantum computing",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "leverages superposition",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "and entanglement.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "Quantum computing leverages superposition and entanglement.",
+          "iteration": 0
+        },
+        {
+          "category": "technical_terms",
+          "text": "Quantum computing leverages superposition and entanglement.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "Quantum computing leverages superposition and entanglement.",
+          "audio_path": "generated_audio\\iter_0_case_13.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_13.wav",
+            "job": {
+              "id": "mock-7178",
+              "file_path": "generated_audio\\iter_0_case_13.wav",
+              "file_hash": "468697440238717178",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:08.142677",
+              "output_path": "/mock/transcript_468697440238717178.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "Quantum computing",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "leverages superposition",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "and entanglement.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "Quantum computing leverages superposition and entanglement.",
+          "iteration": 0
+        },
+        {
+          "category": "technical_terms",
+          "text": "Blockchain technology ensures decentralized consensus mechanisms.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "Blockchain technology ensures decentralized consensus mechanisms.",
+          "audio_path": "generated_audio\\iter_0_case_14.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_14.wav",
+            "job": {
+              "id": "mock-7600",
+              "file_path": "generated_audio\\iter_0_case_14.wav",
+              "file_hash": "-3202555314763362400",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:09.526126",
+              "output_path": "/mock/transcript_-3202555314763362400.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "Blockchain technology",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "ensures decentralized",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "consensus mechanisms.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "Blockchain technology ensures decentralized consensus mechanisms.",
+          "iteration": 0
+        },
+        {
+          "category": "technical_terms",
+          "text": "Blockchain technology ensures decentralized consensus mechanisms.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "Blockchain technology ensures decentralized consensus mechanisms.",
+          "audio_path": "generated_audio\\iter_0_case_15.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_15.wav",
+            "job": {
+              "id": "mock-1086",
+              "file_path": "generated_audio\\iter_0_case_15.wav",
+              "file_hash": "-72125307015548914",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:10.840415",
+              "output_path": "/mock/transcript_-72125307015548914.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "Blockchain technology",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "ensures decentralized",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "consensus mechanisms.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "Blockchain technology ensures decentralized consensus mechanisms.",
+          "iteration": 0
+        },
+        {
+          "category": "technical_terms",
+          "text": "Artificial intelligence systems require extensive training data.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "Artificial intelligence systems require extensive training data.",
+          "audio_path": "generated_audio\\iter_0_case_16.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_16.wav",
+            "job": {
+              "id": "mock-55",
+              "file_path": "generated_audio\\iter_0_case_16.wav",
+              "file_hash": "4648978708543580055",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:12.330871",
+              "output_path": "/mock/transcript_4648978708543580055.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "Artificial intelligence",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "systems require",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "extensive training",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 3.5,
+                  "text": "data.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "Artificial intelligence systems require extensive training data.",
+          "iteration": 0
+        },
+        {
+          "category": "technical_terms",
+          "text": "Artificial intelligence systems require extensive training data.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "Artificial intelligence systems require extensive training data.",
+          "audio_path": "generated_audio\\iter_0_case_17.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_17.wav",
+            "job": {
+              "id": "mock-6702",
+              "file_path": "generated_audio\\iter_0_case_17.wav",
+              "file_hash": "118898531026106702",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:13.933051",
+              "output_path": "/mock/transcript_118898531026106702.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "Artificial intelligence",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "systems require",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "extensive training",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 3.5,
+                  "text": "data.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "Artificial intelligence systems require extensive training data.",
+          "iteration": 0
+        },
+        {
+          "category": "technical_terms",
+          "text": "Natural language processing handles syntactic and semantic analysis.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "Natural language processing handles syntactic and semantic analysis.",
+          "audio_path": "generated_audio\\iter_0_case_18.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_18.wav",
+            "job": {
+              "id": "mock-6902",
+              "file_path": "generated_audio\\iter_0_case_18.wav",
+              "file_hash": "-7127359102925643098",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:15.541260",
+              "output_path": "/mock/transcript_-7127359102925643098.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "Natural language",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "processing handles",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "syntactic and",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 4.0,
+                  "text": "semantic analysis.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "Natural language processing handles syntactic and semantic analysis.",
+          "iteration": 0
+        },
+        {
+          "category": "technical_terms",
+          "text": "Natural language processing handles syntactic and semantic analysis.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "Natural language processing handles syntactic and semantic analysis.",
+          "audio_path": "generated_audio\\iter_0_case_19.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_19.wav",
+            "job": {
+              "id": "mock-1169",
+              "file_path": "generated_audio\\iter_0_case_19.wav",
+              "file_hash": "8710599146082421169",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:17.136827",
+              "output_path": "/mock/transcript_8710599146082421169.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "Natural language",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "processing handles",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "syntactic and",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 4.0,
+                  "text": "semantic analysis.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "Natural language processing handles syntactic and semantic analysis.",
+          "iteration": 0
+        },
+        {
+          "category": "numbers_dates",
+          "text": "The meeting is scheduled for March 15th, 2024 at 3:30 PM.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "The meeting is scheduled for March 15th, 2024 at 3:30 PM.",
+          "audio_path": "generated_audio\\iter_0_case_20.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_20.wav",
+            "job": {
+              "id": "mock-124",
+              "file_path": "generated_audio\\iter_0_case_20.wav",
+              "file_hash": "4182406564513940124",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:18.818844",
+              "output_path": "/mock/transcript_4182406564513940124.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.5,
+                  "text": "The meeting is",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.5,
+                  "end": 3.0,
+                  "text": "scheduled for March",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 4.5,
+                  "text": "15th, 2024 at",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 4.5,
+                  "end": 5.5,
+                  "text": "3:30 PM.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "The meeting is scheduled for March 15th, 2024 at 3:30 PM.",
+          "iteration": 0
+        },
+        {
+          "category": "numbers_dates",
+          "text": "The meeting is scheduled for March 15th, 2024 at 3:30 PM.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "The meeting is scheduled for March 15th, 2024 at 3:30 PM.",
+          "audio_path": "generated_audio\\iter_0_case_21.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_21.wav",
+            "job": {
+              "id": "mock-6123",
+              "file_path": "generated_audio\\iter_0_case_21.wav",
+              "file_hash": "-4612173680417403877",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:20.208763",
+              "output_path": "/mock/transcript_-4612173680417403877.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.5,
+                  "text": "The meeting is",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.5,
+                  "end": 3.0,
+                  "text": "scheduled for March",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 4.5,
+                  "text": "15th, 2024 at",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 4.5,
+                  "end": 5.5,
+                  "text": "3:30 PM.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "The meeting is scheduled for March 15th, 2024 at 3:30 PM.",
+          "iteration": 0
+        },
+        {
+          "category": "numbers_dates",
+          "text": "My phone number is 555-0123 and the zip code is 90210.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "My phone number is 555-0123 and the zip code is 90210.",
+          "audio_path": "generated_audio\\iter_0_case_22.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_22.wav",
+            "job": {
+              "id": "mock-1945",
+              "file_path": "generated_audio\\iter_0_case_22.wav",
+              "file_hash": "-1911315499726028055",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:21.789193",
+              "output_path": "/mock/transcript_-1911315499726028055.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.5,
+                  "text": "My phone number",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.5,
+                  "end": 3.0,
+                  "text": "is 555-0123 and",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 4.5,
+                  "text": "the zip code",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 4.5,
+                  "end": 5.5,
+                  "text": "is 90210.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "My phone number is 555-0123 and the zip code is 90210.",
+          "iteration": 0
+        },
+        {
+          "category": "numbers_dates",
+          "text": "My phone number is 555-0123 and the zip code is 90210.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "My phone number is 555-0123 and the zip code is 90210.",
+          "audio_path": "generated_audio\\iter_0_case_23.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_23.wav",
+            "job": {
+              "id": "mock-4650",
+              "file_path": "generated_audio\\iter_0_case_23.wav",
+              "file_hash": "-8755535381708915350",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:23.573898",
+              "output_path": "/mock/transcript_-8755535381708915350.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.5,
+                  "text": "My phone number",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.5,
+                  "end": 3.0,
+                  "text": "is 555-0123 and",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 4.5,
+                  "text": "the zip code",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 4.5,
+                  "end": 5.5,
+                  "text": "is 90210.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "My phone number is 555-0123 and the zip code is 90210.",
+          "iteration": 0
+        },
+        {
+          "category": "numbers_dates",
+          "text": "The price is $1,234.56 with tax included.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "The price is $1,234.56 with tax included.",
+          "audio_path": "generated_audio\\iter_0_case_24.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_24.wav",
+            "job": {
+              "id": "mock-2631",
+              "file_path": "generated_audio\\iter_0_case_24.wav",
+              "file_hash": "5987039797576862631",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:24.878854",
+              "output_path": "/mock/transcript_5987039797576862631.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "The price",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "is $1,234.56",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "with tax",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 3.5,
+                  "text": "included.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "The price is $1,234.56 with tax included.",
+          "iteration": 0
+        },
+        {
+          "category": "numbers_dates",
+          "text": "The price is $1,234.56 with tax included.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "The price is $1,234.56 with tax included.",
+          "audio_path": "generated_audio\\iter_0_case_25.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_25.wav",
+            "job": {
+              "id": "mock-8665",
+              "file_path": "generated_audio\\iter_0_case_25.wav",
+              "file_hash": "554190544940588665",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:25.830072",
+              "output_path": "/mock/transcript_554190544940588665.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "The price",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "is $1,234.56",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "with tax",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 3.5,
+                  "text": "included.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "The price is $1,234.56 with tax included.",
+          "iteration": 0
+        },
+        {
+          "category": "numbers_dates",
+          "text": "Flight BA-247 departs at 14:25 from gate A-12.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "Flight BA-247 departs at 14:25 from gate A-12.",
+          "audio_path": "generated_audio\\iter_0_case_26.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_26.wav",
+            "job": {
+              "id": "mock-5461",
+              "file_path": "generated_audio\\iter_0_case_26.wav",
+              "file_hash": "-2761288338796794539",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:27.390091",
+              "output_path": "/mock/transcript_-2761288338796794539.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "Flight BA-247",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "departs at",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "14:25 from",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 4.0,
+                  "text": "gate A-12.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "Flight BA-247 departs at 14:25 from gate A-12.",
+          "iteration": 0
+        },
+        {
+          "category": "numbers_dates",
+          "text": "Flight BA-247 departs at 14:25 from gate A-12.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "Flight BA-247 departs at 14:25 from gate A-12.",
+          "audio_path": "generated_audio\\iter_0_case_27.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_27.wav",
+            "job": {
+              "id": "mock-6320",
+              "file_path": "generated_audio\\iter_0_case_27.wav",
+              "file_hash": "-4556603888340593680",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:28.542199",
+              "output_path": "/mock/transcript_-4556603888340593680.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "Flight BA-247",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "departs at",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "14:25 from",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 4.0,
+                  "text": "gate A-12.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "Flight BA-247 departs at 14:25 from gate A-12.",
+          "iteration": 0
+        },
+        {
+          "category": "numbers_dates",
+          "text": "The coordinates are 40.7128\u00b0 N, 74.0060\u00b0 W.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "The coordinates are 40.7128\u00b0 N, 74.0060\u00b0 W.",
+          "audio_path": "generated_audio\\iter_0_case_28.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_28.wav",
+            "job": {
+              "id": "mock-7518",
+              "file_path": "generated_audio\\iter_0_case_28.wav",
+              "file_hash": "-8764853747602872482",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:29.651216",
+              "output_path": "/mock/transcript_-8764853747602872482.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "The coordinates",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "are 40.7128\u00b0",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "N, 74.0060\u00b0",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 3.5,
+                  "text": "W.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "The coordinates are 40.7128\u00b0 N, 74.0060\u00b0 W.",
+          "iteration": 0
+        },
+        {
+          "category": "numbers_dates",
+          "text": "The coordinates are 40.7128\u00b0 N, 74.0060\u00b0 W.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "The coordinates are 40.7128\u00b0 N, 74.0060\u00b0 W.",
+          "audio_path": "generated_audio\\iter_0_case_29.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_29.wav",
+            "job": {
+              "id": "mock-8695",
+              "file_path": "generated_audio\\iter_0_case_29.wav",
+              "file_hash": "6617426108417068695",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:31.215950",
+              "output_path": "/mock/transcript_6617426108417068695.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "The coordinates",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "are 40.7128\u00b0",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "N, 74.0060\u00b0",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 3.5,
+                  "text": "W.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "The coordinates are 40.7128\u00b0 N, 74.0060\u00b0 W.",
+          "iteration": 0
+        },
+        {
+          "category": "foreign_words",
+          "text": "The restaurant serves excellent cuisine with French sauces.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "The restaurant serves excellent cuisine with French sauces.",
+          "audio_path": "generated_audio\\iter_0_case_30.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_30.wav",
+            "job": {
+              "id": "mock-5749",
+              "file_path": "generated_audio\\iter_0_case_30.wav",
+              "file_hash": "68784684235535749",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:33.197366",
+              "output_path": "/mock/transcript_68784684235535749.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "The restaurant",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "serves excellent",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "cuisine with",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 4.0,
+                  "text": "French sauces.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "The restaurant serves excellent cuisine with French sauces.",
+          "iteration": 0
+        },
+        {
+          "category": "foreign_words",
+          "text": "The restaurant serves excellent cuisine with French sauces.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "The restaurant serves excellent cuisine with French sauces.",
+          "audio_path": "generated_audio\\iter_0_case_31.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_31.wav",
+            "job": {
+              "id": "mock-7730",
+              "file_path": "generated_audio\\iter_0_case_31.wav",
+              "file_hash": "-3911797305345822270",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:34.849693",
+              "output_path": "/mock/transcript_-3911797305345822270.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "The restaurant",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "serves excellent",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "cuisine with",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 4.0,
+                  "text": "French sauces.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "The restaurant serves excellent cuisine with French sauces.",
+          "iteration": 0
+        },
+        {
+          "category": "foreign_words",
+          "text": "Schadenfreude is a German word meaning pleasure from others' misfortune.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "Schadenfreude is a German word meaning pleasure from others' misfortune.",
+          "audio_path": "generated_audio\\iter_0_case_32.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_32.wav",
+            "job": {
+              "id": "mock-8250",
+              "file_path": "generated_audio\\iter_0_case_32.wav",
+              "file_hash": "-2970853059486921750",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:36.274284",
+              "output_path": "/mock/transcript_-2970853059486921750.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.5,
+                  "text": "Schadenfreude is a",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.5,
+                  "end": 3.0,
+                  "text": "German word meaning",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 4.5,
+                  "text": "pleasure from others'",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 4.5,
+                  "end": 5.0,
+                  "text": "misfortune.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "Schadenfreude is a German word meaning pleasure from others' misfortune.",
+          "iteration": 0
+        },
+        {
+          "category": "foreign_words",
+          "text": "Schadenfreude is a German word meaning pleasure from others' misfortune.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "Schadenfreude is a German word meaning pleasure from others' misfortune.",
+          "audio_path": "generated_audio\\iter_0_case_33.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_33.wav",
+            "job": {
+              "id": "mock-7186",
+              "file_path": "generated_audio\\iter_0_case_33.wav",
+              "file_hash": "751407867162177186",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:37.824596",
+              "output_path": "/mock/transcript_751407867162177186.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.5,
+                  "text": "Schadenfreude is a",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.5,
+                  "end": 3.0,
+                  "text": "German word meaning",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 4.5,
+                  "text": "pleasure from others'",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 4.5,
+                  "end": 5.0,
+                  "text": "misfortune.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "Schadenfreude is a German word meaning pleasure from others' misfortune.",
+          "iteration": 0
+        },
+        {
+          "category": "foreign_words",
+          "text": "The yoga instructor teaches pranayama breathing techniques.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "The yoga instructor teaches pranayama breathing techniques.",
+          "audio_path": "generated_audio\\iter_0_case_34.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_34.wav",
+            "job": {
+              "id": "mock-6004",
+              "file_path": "generated_audio\\iter_0_case_34.wav",
+              "file_hash": "608874947849456004",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:39.386974",
+              "output_path": "/mock/transcript_608874947849456004.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "The yoga",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "instructor teaches",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "pranayama breathing",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 3.5,
+                  "text": "techniques.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "The yoga instructor teaches pranayama breathing techniques.",
+          "iteration": 0
+        },
+        {
+          "category": "foreign_words",
+          "text": "The yoga instructor teaches pranayama breathing techniques.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "The yoga instructor teaches pranayama breathing techniques.",
+          "audio_path": "generated_audio\\iter_0_case_35.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_35.wav",
+            "job": {
+              "id": "mock-1822",
+              "file_path": "generated_audio\\iter_0_case_35.wav",
+              "file_hash": "-252182588088588178",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:40.918952",
+              "output_path": "/mock/transcript_-252182588088588178.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "The yoga",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "instructor teaches",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "pranayama breathing",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 3.5,
+                  "text": "techniques.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "The yoga instructor teaches pranayama breathing techniques.",
+          "iteration": 0
+        },
+        {
+          "category": "foreign_words",
+          "text": "The museum displays Renaissance art from the quattrocento period.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "The museum displays Renaissance art from the quattrocento period.",
+          "audio_path": "generated_audio\\iter_0_case_36.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_36.wav",
+            "job": {
+              "id": "mock-108",
+              "file_path": "generated_audio\\iter_0_case_36.wav",
+              "file_hash": "-4042495589369189892",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:42.722365",
+              "output_path": "/mock/transcript_-4042495589369189892.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.5,
+                  "text": "The museum displays",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.5,
+                  "end": 3.0,
+                  "text": "Renaissance art from",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 4.5,
+                  "text": "the quattrocento period.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "The museum displays Renaissance art from the quattrocento period.",
+          "iteration": 0
+        },
+        {
+          "category": "foreign_words",
+          "text": "The museum displays Renaissance art from the quattrocento period.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "The museum displays Renaissance art from the quattrocento period.",
+          "audio_path": "generated_audio\\iter_0_case_37.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_37.wav",
+            "job": {
+              "id": "mock-8414",
+              "file_path": "generated_audio\\iter_0_case_37.wav",
+              "file_hash": "373109307246808414",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:44.221263",
+              "output_path": "/mock/transcript_373109307246808414.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.5,
+                  "text": "The museum displays",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.5,
+                  "end": 3.0,
+                  "text": "Renaissance art from",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 4.5,
+                  "text": "the quattrocento period.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "The museum displays Renaissance art from the quattrocento period.",
+          "iteration": 0
+        },
+        {
+          "category": "foreign_words",
+          "text": "The caf\u00e9 au lait was served in a porcelain demitasse cup.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "The caf\u00e9 au lait was served in a porcelain demitasse cup.",
+          "audio_path": "generated_audio\\iter_0_case_38.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_38.wav",
+            "job": {
+              "id": "mock-1801",
+              "file_path": "generated_audio\\iter_0_case_38.wav",
+              "file_hash": "4667522239492441801",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:45.820839",
+              "output_path": "/mock/transcript_4667522239492441801.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.5,
+                  "text": "The caf\u00e9 au",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.5,
+                  "end": 3.0,
+                  "text": "lait was served",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 4.5,
+                  "text": "in a porcelain",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 4.5,
+                  "end": 5.5,
+                  "text": "demitasse cup.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "The caf\u00e9 au lait was served in a porcelain demitasse cup.",
+          "iteration": 0
+        },
+        {
+          "category": "foreign_words",
+          "text": "The caf\u00e9 au lait was served in a porcelain demitasse cup.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "The caf\u00e9 au lait was served in a porcelain demitasse cup.",
+          "audio_path": "generated_audio\\iter_0_case_39.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_39.wav",
+            "job": {
+              "id": "mock-8273",
+              "file_path": "generated_audio\\iter_0_case_39.wav",
+              "file_hash": "7270061899243698273",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:46.977091",
+              "output_path": "/mock/transcript_7270061899243698273.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.5,
+                  "text": "The caf\u00e9 au",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.5,
+                  "end": 3.0,
+                  "text": "lait was served",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 4.5,
+                  "text": "in a porcelain",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 4.5,
+                  "end": 5.5,
+                  "text": "demitasse cup.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "The caf\u00e9 au lait was served in a porcelain demitasse cup.",
+          "iteration": 0
+        }
+      ],
+      "analysis": {
+        "total_tests": 40,
+        "successful_transcriptions": 40,
+        "average_accuracy": 1.0,
+        "category_performance": {
+          "simple_sentences": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "technical_terms": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "numbers_dates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "foreign_words": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "voice_performance": {
+          "opentts_espeak_en_us_female": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "opentts_espeak_en_us_male": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "error_patterns": [],
+        "improvement_areas": []
+      },
+      "suggestions": []
+    },
+    {
+      "iteration": 1,
+      "results": [
+        {
+          "category": "simple_sentences",
+          "text": "Hello world, this is a test.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "Hello world, this is a test.",
+          "audio_path": "generated_audio\\iter_0_case_0.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_0.wav",
+            "job": {
+              "id": "mock-7483",
+              "file_path": "generated_audio\\iter_0_case_0.wav",
+              "file_hash": "-8062676637869722517",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:48.010501",
+              "output_path": "/mock/transcript_-8062676637869722517.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "Hello world,",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "this is",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "a test.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "Hello world, this is a test.",
+          "iteration": 1
+        },
+        {
+          "category": "simple_sentences",
+          "text": "Hello world, this is a test.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "Hello world, this is a test.",
+          "audio_path": "generated_audio\\iter_0_case_1.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_1.wav",
+            "job": {
+              "id": "mock-76",
+              "file_path": "generated_audio\\iter_0_case_1.wav",
+              "file_hash": "5833132390397760076",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:48.532099",
+              "output_path": "/mock/transcript_5833132390397760076.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "Hello world,",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "this is",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "a test.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "Hello world, this is a test.",
+          "iteration": 1
+        },
+        {
+          "category": "simple_sentences",
+          "text": "The quick brown fox jumps over the lazy dog.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "The quick brown fox jumps over the lazy dog.",
+          "audio_path": "generated_audio\\iter_0_case_2.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_2.wav",
+            "job": {
+              "id": "mock-911",
+              "file_path": "generated_audio\\iter_0_case_2.wav",
+              "file_hash": "-9018561078918849089",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:49.082450",
+              "output_path": "/mock/transcript_-9018561078918849089.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.5,
+                  "text": "The quick brown",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.5,
+                  "end": 3.0,
+                  "text": "fox jumps over",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 4.5,
+                  "text": "the lazy dog.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "The quick brown fox jumps over the lazy dog.",
+          "iteration": 1
+        },
+        {
+          "category": "simple_sentences",
+          "text": "The quick brown fox jumps over the lazy dog.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "The quick brown fox jumps over the lazy dog.",
+          "audio_path": "generated_audio\\iter_0_case_3.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_3.wav",
+            "job": {
+              "id": "mock-9221",
+              "file_path": "generated_audio\\iter_0_case_3.wav",
+              "file_hash": "8395821221749019221",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:49.593433",
+              "output_path": "/mock/transcript_8395821221749019221.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.5,
+                  "text": "The quick brown",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.5,
+                  "end": 3.0,
+                  "text": "fox jumps over",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 4.5,
+                  "text": "the lazy dog.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "The quick brown fox jumps over the lazy dog.",
+          "iteration": 1
+        },
+        {
+          "category": "simple_sentences",
+          "text": "How are you doing today?",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "How are you doing today?",
+          "audio_path": "generated_audio\\iter_0_case_4.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_4.wav",
+            "job": {
+              "id": "mock-9496",
+              "file_path": "generated_audio\\iter_0_case_4.wav",
+              "file_hash": "456331111267089496",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:50.108193",
+              "output_path": "/mock/transcript_456331111267089496.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.5,
+                  "text": "How",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 0.5,
+                  "end": 1.0,
+                  "text": "are",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 1.5,
+                  "text": "you",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.5,
+                  "end": 2.0,
+                  "text": "doing",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 2.5,
+                  "text": "today?",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "How are you doing today?",
+          "iteration": 1
+        },
+        {
+          "category": "simple_sentences",
+          "text": "How are you doing today?",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "How are you doing today?",
+          "audio_path": "generated_audio\\iter_0_case_5.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_5.wav",
+            "job": {
+              "id": "mock-4682",
+              "file_path": "generated_audio\\iter_0_case_5.wav",
+              "file_hash": "8874419117789024682",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:50.651513",
+              "output_path": "/mock/transcript_8874419117789024682.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.5,
+                  "text": "How",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 0.5,
+                  "end": 1.0,
+                  "text": "are",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 1.5,
+                  "text": "you",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.5,
+                  "end": 2.0,
+                  "text": "doing",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 2.5,
+                  "text": "today?",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "How are you doing today?",
+          "iteration": 1
+        },
+        {
+          "category": "simple_sentences",
+          "text": "I am testing speech recognition software.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "I am testing speech recognition software.",
+          "audio_path": "generated_audio\\iter_0_case_6.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_6.wav",
+            "job": {
+              "id": "mock-8764",
+              "file_path": "generated_audio\\iter_0_case_6.wav",
+              "file_hash": "-3032558612310151236",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:51.162625",
+              "output_path": "/mock/transcript_-3032558612310151236.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "I am",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "testing speech",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "recognition software.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "I am testing speech recognition software.",
+          "iteration": 1
+        },
+        {
+          "category": "simple_sentences",
+          "text": "I am testing speech recognition software.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "I am testing speech recognition software.",
+          "audio_path": "generated_audio\\iter_0_case_7.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_7.wav",
+            "job": {
+              "id": "mock-7665",
+              "file_path": "generated_audio\\iter_0_case_7.wav",
+              "file_hash": "-5133217126057582335",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:51.718751",
+              "output_path": "/mock/transcript_-5133217126057582335.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "I am",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "testing speech",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "recognition software.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "I am testing speech recognition software.",
+          "iteration": 1
+        },
+        {
+          "category": "simple_sentences",
+          "text": "Please transcribe this audio correctly.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "Please transcribe this audio correctly.",
+          "audio_path": "generated_audio\\iter_0_case_8.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_8.wav",
+            "job": {
+              "id": "mock-8045",
+              "file_path": "generated_audio\\iter_0_case_8.wav",
+              "file_hash": "-5753976393631331955",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:52.253705",
+              "output_path": "/mock/transcript_-5753976393631331955.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.5,
+                  "text": "Please",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 0.5,
+                  "end": 1.0,
+                  "text": "transcribe",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 1.5,
+                  "text": "this",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.5,
+                  "end": 2.0,
+                  "text": "audio",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 2.5,
+                  "text": "correctly.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "Please transcribe this audio correctly.",
+          "iteration": 1
+        },
+        {
+          "category": "simple_sentences",
+          "text": "Please transcribe this audio correctly.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "Please transcribe this audio correctly.",
+          "audio_path": "generated_audio\\iter_0_case_9.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_9.wav",
+            "job": {
+              "id": "mock-4599",
+              "file_path": "generated_audio\\iter_0_case_9.wav",
+              "file_hash": "8404663029724424599",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:52.780374",
+              "output_path": "/mock/transcript_8404663029724424599.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.5,
+                  "text": "Please",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 0.5,
+                  "end": 1.0,
+                  "text": "transcribe",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 1.5,
+                  "text": "this",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.5,
+                  "end": 2.0,
+                  "text": "audio",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 2.5,
+                  "text": "correctly.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "Please transcribe this audio correctly.",
+          "iteration": 1
+        },
+        {
+          "category": "technical_terms",
+          "text": "Machine learning algorithms optimize neural network parameters.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "Machine learning algorithms optimize neural network parameters.",
+          "audio_path": "generated_audio\\iter_0_case_10.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_10.wav",
+            "job": {
+              "id": "mock-3575",
+              "file_path": "generated_audio\\iter_0_case_10.wav",
+              "file_hash": "6123088993586313575",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:53.322212",
+              "output_path": "/mock/transcript_6123088993586313575.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "Machine learning",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "algorithms optimize",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "neural network",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 3.5,
+                  "text": "parameters.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "Machine learning algorithms optimize neural network parameters.",
+          "iteration": 1
+        },
+        {
+          "category": "technical_terms",
+          "text": "Machine learning algorithms optimize neural network parameters.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "Machine learning algorithms optimize neural network parameters.",
+          "audio_path": "generated_audio\\iter_0_case_11.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_11.wav",
+            "job": {
+              "id": "mock-8379",
+              "file_path": "generated_audio\\iter_0_case_11.wav",
+              "file_hash": "6907333193790788379",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:53.829345",
+              "output_path": "/mock/transcript_6907333193790788379.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "Machine learning",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "algorithms optimize",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "neural network",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 3.5,
+                  "text": "parameters.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "Machine learning algorithms optimize neural network parameters.",
+          "iteration": 1
+        },
+        {
+          "category": "technical_terms",
+          "text": "Quantum computing leverages superposition and entanglement.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "Quantum computing leverages superposition and entanglement.",
+          "audio_path": "generated_audio\\iter_0_case_12.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_12.wav",
+            "job": {
+              "id": "mock-261",
+              "file_path": "generated_audio\\iter_0_case_12.wav",
+              "file_hash": "7950755984340680261",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:54.346003",
+              "output_path": "/mock/transcript_7950755984340680261.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "Quantum computing",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "leverages superposition",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "and entanglement.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "Quantum computing leverages superposition and entanglement.",
+          "iteration": 1
+        },
+        {
+          "category": "technical_terms",
+          "text": "Quantum computing leverages superposition and entanglement.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "Quantum computing leverages superposition and entanglement.",
+          "audio_path": "generated_audio\\iter_0_case_13.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_13.wav",
+            "job": {
+              "id": "mock-7178",
+              "file_path": "generated_audio\\iter_0_case_13.wav",
+              "file_hash": "468697440238717178",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:54.867482",
+              "output_path": "/mock/transcript_468697440238717178.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "Quantum computing",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "leverages superposition",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "and entanglement.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "Quantum computing leverages superposition and entanglement.",
+          "iteration": 1
+        },
+        {
+          "category": "technical_terms",
+          "text": "Blockchain technology ensures decentralized consensus mechanisms.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "Blockchain technology ensures decentralized consensus mechanisms.",
+          "audio_path": "generated_audio\\iter_0_case_14.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_14.wav",
+            "job": {
+              "id": "mock-7600",
+              "file_path": "generated_audio\\iter_0_case_14.wav",
+              "file_hash": "-3202555314763362400",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:55.385581",
+              "output_path": "/mock/transcript_-3202555314763362400.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "Blockchain technology",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "ensures decentralized",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "consensus mechanisms.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "Blockchain technology ensures decentralized consensus mechanisms.",
+          "iteration": 1
+        },
+        {
+          "category": "technical_terms",
+          "text": "Blockchain technology ensures decentralized consensus mechanisms.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "Blockchain technology ensures decentralized consensus mechanisms.",
+          "audio_path": "generated_audio\\iter_0_case_15.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_15.wav",
+            "job": {
+              "id": "mock-1086",
+              "file_path": "generated_audio\\iter_0_case_15.wav",
+              "file_hash": "-72125307015548914",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:55.895212",
+              "output_path": "/mock/transcript_-72125307015548914.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "Blockchain technology",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "ensures decentralized",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "consensus mechanisms.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "Blockchain technology ensures decentralized consensus mechanisms.",
+          "iteration": 1
+        },
+        {
+          "category": "technical_terms",
+          "text": "Artificial intelligence systems require extensive training data.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "Artificial intelligence systems require extensive training data.",
+          "audio_path": "generated_audio\\iter_0_case_16.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_16.wav",
+            "job": {
+              "id": "mock-55",
+              "file_path": "generated_audio\\iter_0_case_16.wav",
+              "file_hash": "4648978708543580055",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:56.415876",
+              "output_path": "/mock/transcript_4648978708543580055.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "Artificial intelligence",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "systems require",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "extensive training",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 3.5,
+                  "text": "data.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "Artificial intelligence systems require extensive training data.",
+          "iteration": 1
+        },
+        {
+          "category": "technical_terms",
+          "text": "Artificial intelligence systems require extensive training data.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "Artificial intelligence systems require extensive training data.",
+          "audio_path": "generated_audio\\iter_0_case_17.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_17.wav",
+            "job": {
+              "id": "mock-6702",
+              "file_path": "generated_audio\\iter_0_case_17.wav",
+              "file_hash": "118898531026106702",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:57.012928",
+              "output_path": "/mock/transcript_118898531026106702.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "Artificial intelligence",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "systems require",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "extensive training",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 3.5,
+                  "text": "data.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "Artificial intelligence systems require extensive training data.",
+          "iteration": 1
+        },
+        {
+          "category": "technical_terms",
+          "text": "Natural language processing handles syntactic and semantic analysis.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "Natural language processing handles syntactic and semantic analysis.",
+          "audio_path": "generated_audio\\iter_0_case_18.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_18.wav",
+            "job": {
+              "id": "mock-6902",
+              "file_path": "generated_audio\\iter_0_case_18.wav",
+              "file_hash": "-7127359102925643098",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:57.539038",
+              "output_path": "/mock/transcript_-7127359102925643098.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "Natural language",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "processing handles",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "syntactic and",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 4.0,
+                  "text": "semantic analysis.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "Natural language processing handles syntactic and semantic analysis.",
+          "iteration": 1
+        },
+        {
+          "category": "technical_terms",
+          "text": "Natural language processing handles syntactic and semantic analysis.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "Natural language processing handles syntactic and semantic analysis.",
+          "audio_path": "generated_audio\\iter_0_case_19.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_19.wav",
+            "job": {
+              "id": "mock-1169",
+              "file_path": "generated_audio\\iter_0_case_19.wav",
+              "file_hash": "8710599146082421169",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:58.070549",
+              "output_path": "/mock/transcript_8710599146082421169.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "Natural language",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "processing handles",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "syntactic and",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 4.0,
+                  "text": "semantic analysis.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "Natural language processing handles syntactic and semantic analysis.",
+          "iteration": 1
+        },
+        {
+          "category": "numbers_dates",
+          "text": "The meeting is scheduled for March 15th, 2024 at 3:30 PM.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "The meeting is scheduled for March 15th, 2024 at 3:30 PM.",
+          "audio_path": "generated_audio\\iter_0_case_20.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_20.wav",
+            "job": {
+              "id": "mock-124",
+              "file_path": "generated_audio\\iter_0_case_20.wav",
+              "file_hash": "4182406564513940124",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:58.586733",
+              "output_path": "/mock/transcript_4182406564513940124.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.5,
+                  "text": "The meeting is",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.5,
+                  "end": 3.0,
+                  "text": "scheduled for March",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 4.5,
+                  "text": "15th, 2024 at",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 4.5,
+                  "end": 5.5,
+                  "text": "3:30 PM.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "The meeting is scheduled for March 15th, 2024 at 3:30 PM.",
+          "iteration": 1
+        },
+        {
+          "category": "numbers_dates",
+          "text": "The meeting is scheduled for March 15th, 2024 at 3:30 PM.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "The meeting is scheduled for March 15th, 2024 at 3:30 PM.",
+          "audio_path": "generated_audio\\iter_0_case_21.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_21.wav",
+            "job": {
+              "id": "mock-6123",
+              "file_path": "generated_audio\\iter_0_case_21.wav",
+              "file_hash": "-4612173680417403877",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:59.103238",
+              "output_path": "/mock/transcript_-4612173680417403877.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.5,
+                  "text": "The meeting is",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.5,
+                  "end": 3.0,
+                  "text": "scheduled for March",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 4.5,
+                  "text": "15th, 2024 at",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 4.5,
+                  "end": 5.5,
+                  "text": "3:30 PM.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "The meeting is scheduled for March 15th, 2024 at 3:30 PM.",
+          "iteration": 1
+        },
+        {
+          "category": "numbers_dates",
+          "text": "My phone number is 555-0123 and the zip code is 90210.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "My phone number is 555-0123 and the zip code is 90210.",
+          "audio_path": "generated_audio\\iter_0_case_22.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_22.wav",
+            "job": {
+              "id": "mock-1945",
+              "file_path": "generated_audio\\iter_0_case_22.wav",
+              "file_hash": "-1911315499726028055",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:38:59.608445",
+              "output_path": "/mock/transcript_-1911315499726028055.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.5,
+                  "text": "My phone number",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.5,
+                  "end": 3.0,
+                  "text": "is 555-0123 and",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 4.5,
+                  "text": "the zip code",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 4.5,
+                  "end": 5.5,
+                  "text": "is 90210.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "My phone number is 555-0123 and the zip code is 90210.",
+          "iteration": 1
+        },
+        {
+          "category": "numbers_dates",
+          "text": "My phone number is 555-0123 and the zip code is 90210.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "My phone number is 555-0123 and the zip code is 90210.",
+          "audio_path": "generated_audio\\iter_0_case_23.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_23.wav",
+            "job": {
+              "id": "mock-4650",
+              "file_path": "generated_audio\\iter_0_case_23.wav",
+              "file_hash": "-8755535381708915350",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:39:00.117157",
+              "output_path": "/mock/transcript_-8755535381708915350.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.5,
+                  "text": "My phone number",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.5,
+                  "end": 3.0,
+                  "text": "is 555-0123 and",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 4.5,
+                  "text": "the zip code",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 4.5,
+                  "end": 5.5,
+                  "text": "is 90210.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "My phone number is 555-0123 and the zip code is 90210.",
+          "iteration": 1
+        },
+        {
+          "category": "numbers_dates",
+          "text": "The price is $1,234.56 with tax included.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "The price is $1,234.56 with tax included.",
+          "audio_path": "generated_audio\\iter_0_case_24.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_24.wav",
+            "job": {
+              "id": "mock-2631",
+              "file_path": "generated_audio\\iter_0_case_24.wav",
+              "file_hash": "5987039797576862631",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:39:00.625939",
+              "output_path": "/mock/transcript_5987039797576862631.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "The price",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "is $1,234.56",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "with tax",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 3.5,
+                  "text": "included.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "The price is $1,234.56 with tax included.",
+          "iteration": 1
+        },
+        {
+          "category": "numbers_dates",
+          "text": "The price is $1,234.56 with tax included.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "The price is $1,234.56 with tax included.",
+          "audio_path": "generated_audio\\iter_0_case_25.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_25.wav",
+            "job": {
+              "id": "mock-8665",
+              "file_path": "generated_audio\\iter_0_case_25.wav",
+              "file_hash": "554190544940588665",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:39:01.132547",
+              "output_path": "/mock/transcript_554190544940588665.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "The price",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "is $1,234.56",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "with tax",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 3.5,
+                  "text": "included.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "The price is $1,234.56 with tax included.",
+          "iteration": 1
+        },
+        {
+          "category": "numbers_dates",
+          "text": "Flight BA-247 departs at 14:25 from gate A-12.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "Flight BA-247 departs at 14:25 from gate A-12.",
+          "audio_path": "generated_audio\\iter_0_case_26.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_26.wav",
+            "job": {
+              "id": "mock-5461",
+              "file_path": "generated_audio\\iter_0_case_26.wav",
+              "file_hash": "-2761288338796794539",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:39:01.643500",
+              "output_path": "/mock/transcript_-2761288338796794539.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "Flight BA-247",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "departs at",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "14:25 from",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 4.0,
+                  "text": "gate A-12.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "Flight BA-247 departs at 14:25 from gate A-12.",
+          "iteration": 1
+        },
+        {
+          "category": "numbers_dates",
+          "text": "Flight BA-247 departs at 14:25 from gate A-12.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "Flight BA-247 departs at 14:25 from gate A-12.",
+          "audio_path": "generated_audio\\iter_0_case_27.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_27.wav",
+            "job": {
+              "id": "mock-6320",
+              "file_path": "generated_audio\\iter_0_case_27.wav",
+              "file_hash": "-4556603888340593680",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:39:02.145900",
+              "output_path": "/mock/transcript_-4556603888340593680.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "Flight BA-247",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "departs at",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "14:25 from",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 4.0,
+                  "text": "gate A-12.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "Flight BA-247 departs at 14:25 from gate A-12.",
+          "iteration": 1
+        },
+        {
+          "category": "numbers_dates",
+          "text": "The coordinates are 40.7128\u00b0 N, 74.0060\u00b0 W.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "The coordinates are 40.7128\u00b0 N, 74.0060\u00b0 W.",
+          "audio_path": "generated_audio\\iter_0_case_28.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_28.wav",
+            "job": {
+              "id": "mock-7518",
+              "file_path": "generated_audio\\iter_0_case_28.wav",
+              "file_hash": "-8764853747602872482",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:39:02.656718",
+              "output_path": "/mock/transcript_-8764853747602872482.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "The coordinates",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "are 40.7128\u00b0",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "N, 74.0060\u00b0",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 3.5,
+                  "text": "W.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "The coordinates are 40.7128\u00b0 N, 74.0060\u00b0 W.",
+          "iteration": 1
+        },
+        {
+          "category": "numbers_dates",
+          "text": "The coordinates are 40.7128\u00b0 N, 74.0060\u00b0 W.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "The coordinates are 40.7128\u00b0 N, 74.0060\u00b0 W.",
+          "audio_path": "generated_audio\\iter_0_case_29.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_29.wav",
+            "job": {
+              "id": "mock-8695",
+              "file_path": "generated_audio\\iter_0_case_29.wav",
+              "file_hash": "6617426108417068695",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:39:03.161565",
+              "output_path": "/mock/transcript_6617426108417068695.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "The coordinates",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "are 40.7128\u00b0",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "N, 74.0060\u00b0",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 3.5,
+                  "text": "W.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "The coordinates are 40.7128\u00b0 N, 74.0060\u00b0 W.",
+          "iteration": 1
+        },
+        {
+          "category": "foreign_words",
+          "text": "The restaurant serves excellent cuisine with French sauces.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "The restaurant serves excellent cuisine with French sauces.",
+          "audio_path": "generated_audio\\iter_0_case_30.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_30.wav",
+            "job": {
+              "id": "mock-5749",
+              "file_path": "generated_audio\\iter_0_case_30.wav",
+              "file_hash": "68784684235535749",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:39:03.671823",
+              "output_path": "/mock/transcript_68784684235535749.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "The restaurant",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "serves excellent",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "cuisine with",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 4.0,
+                  "text": "French sauces.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "The restaurant serves excellent cuisine with French sauces.",
+          "iteration": 1
+        },
+        {
+          "category": "foreign_words",
+          "text": "The restaurant serves excellent cuisine with French sauces.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "The restaurant serves excellent cuisine with French sauces.",
+          "audio_path": "generated_audio\\iter_0_case_31.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_31.wav",
+            "job": {
+              "id": "mock-7730",
+              "file_path": "generated_audio\\iter_0_case_31.wav",
+              "file_hash": "-3911797305345822270",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:39:04.177395",
+              "output_path": "/mock/transcript_-3911797305345822270.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "The restaurant",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "serves excellent",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "cuisine with",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 4.0,
+                  "text": "French sauces.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "The restaurant serves excellent cuisine with French sauces.",
+          "iteration": 1
+        },
+        {
+          "category": "foreign_words",
+          "text": "Schadenfreude is a German word meaning pleasure from others' misfortune.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "Schadenfreude is a German word meaning pleasure from others' misfortune.",
+          "audio_path": "generated_audio\\iter_0_case_32.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_32.wav",
+            "job": {
+              "id": "mock-8250",
+              "file_path": "generated_audio\\iter_0_case_32.wav",
+              "file_hash": "-2970853059486921750",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:39:04.692671",
+              "output_path": "/mock/transcript_-2970853059486921750.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.5,
+                  "text": "Schadenfreude is a",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.5,
+                  "end": 3.0,
+                  "text": "German word meaning",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 4.5,
+                  "text": "pleasure from others'",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 4.5,
+                  "end": 5.0,
+                  "text": "misfortune.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "Schadenfreude is a German word meaning pleasure from others' misfortune.",
+          "iteration": 1
+        },
+        {
+          "category": "foreign_words",
+          "text": "Schadenfreude is a German word meaning pleasure from others' misfortune.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "Schadenfreude is a German word meaning pleasure from others' misfortune.",
+          "audio_path": "generated_audio\\iter_0_case_33.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_33.wav",
+            "job": {
+              "id": "mock-7186",
+              "file_path": "generated_audio\\iter_0_case_33.wav",
+              "file_hash": "751407867162177186",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:39:05.199099",
+              "output_path": "/mock/transcript_751407867162177186.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.5,
+                  "text": "Schadenfreude is a",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.5,
+                  "end": 3.0,
+                  "text": "German word meaning",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 4.5,
+                  "text": "pleasure from others'",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 4.5,
+                  "end": 5.0,
+                  "text": "misfortune.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "Schadenfreude is a German word meaning pleasure from others' misfortune.",
+          "iteration": 1
+        },
+        {
+          "category": "foreign_words",
+          "text": "The yoga instructor teaches pranayama breathing techniques.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "The yoga instructor teaches pranayama breathing techniques.",
+          "audio_path": "generated_audio\\iter_0_case_34.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_34.wav",
+            "job": {
+              "id": "mock-6004",
+              "file_path": "generated_audio\\iter_0_case_34.wav",
+              "file_hash": "608874947849456004",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:39:05.708026",
+              "output_path": "/mock/transcript_608874947849456004.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "The yoga",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "instructor teaches",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "pranayama breathing",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 3.5,
+                  "text": "techniques.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "The yoga instructor teaches pranayama breathing techniques.",
+          "iteration": 1
+        },
+        {
+          "category": "foreign_words",
+          "text": "The yoga instructor teaches pranayama breathing techniques.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "The yoga instructor teaches pranayama breathing techniques.",
+          "audio_path": "generated_audio\\iter_0_case_35.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_35.wav",
+            "job": {
+              "id": "mock-1822",
+              "file_path": "generated_audio\\iter_0_case_35.wav",
+              "file_hash": "-252182588088588178",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:39:06.222644",
+              "output_path": "/mock/transcript_-252182588088588178.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": "The yoga",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.0,
+                  "end": 2.0,
+                  "text": "instructor teaches",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 2.0,
+                  "end": 3.0,
+                  "text": "pranayama breathing",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 3.5,
+                  "text": "techniques.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "The yoga instructor teaches pranayama breathing techniques.",
+          "iteration": 1
+        },
+        {
+          "category": "foreign_words",
+          "text": "The museum displays Renaissance art from the quattrocento period.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "The museum displays Renaissance art from the quattrocento period.",
+          "audio_path": "generated_audio\\iter_0_case_36.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_36.wav",
+            "job": {
+              "id": "mock-108",
+              "file_path": "generated_audio\\iter_0_case_36.wav",
+              "file_hash": "-4042495589369189892",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:39:06.731084",
+              "output_path": "/mock/transcript_-4042495589369189892.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.5,
+                  "text": "The museum displays",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.5,
+                  "end": 3.0,
+                  "text": "Renaissance art from",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 4.5,
+                  "text": "the quattrocento period.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "The museum displays Renaissance art from the quattrocento period.",
+          "iteration": 1
+        },
+        {
+          "category": "foreign_words",
+          "text": "The museum displays Renaissance art from the quattrocento period.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "The museum displays Renaissance art from the quattrocento period.",
+          "audio_path": "generated_audio\\iter_0_case_37.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_37.wav",
+            "job": {
+              "id": "mock-8414",
+              "file_path": "generated_audio\\iter_0_case_37.wav",
+              "file_hash": "373109307246808414",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:39:07.240040",
+              "output_path": "/mock/transcript_373109307246808414.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.5,
+                  "text": "The museum displays",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.5,
+                  "end": 3.0,
+                  "text": "Renaissance art from",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 4.5,
+                  "text": "the quattrocento period.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "The museum displays Renaissance art from the quattrocento period.",
+          "iteration": 1
+        },
+        {
+          "category": "foreign_words",
+          "text": "The caf\u00e9 au lait was served in a porcelain demitasse cup.",
+          "voice": "opentts_espeak_en_us_female",
+          "expected_transcription": "The caf\u00e9 au lait was served in a porcelain demitasse cup.",
+          "audio_path": "generated_audio\\iter_0_case_38.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_38.wav",
+            "job": {
+              "id": "mock-1801",
+              "file_path": "generated_audio\\iter_0_case_38.wav",
+              "file_hash": "4667522239492441801",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:39:07.758051",
+              "output_path": "/mock/transcript_4667522239492441801.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.5,
+                  "text": "The caf\u00e9 au",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.5,
+                  "end": 3.0,
+                  "text": "lait was served",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 4.5,
+                  "text": "in a porcelain",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 4.5,
+                  "end": 5.5,
+                  "text": "demitasse cup.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "The caf\u00e9 au lait was served in a porcelain demitasse cup.",
+          "iteration": 1
+        },
+        {
+          "category": "foreign_words",
+          "text": "The caf\u00e9 au lait was served in a porcelain demitasse cup.",
+          "voice": "opentts_espeak_en_us_male",
+          "expected_transcription": "The caf\u00e9 au lait was served in a porcelain demitasse cup.",
+          "audio_path": "generated_audio\\iter_0_case_39.wav",
+          "transcription_result": {
+            "success": true,
+            "message": "Successfully processed iter_0_case_39.wav",
+            "job": {
+              "id": "mock-8273",
+              "file_path": "generated_audio\\iter_0_case_39.wav",
+              "file_hash": "7270061899243698273",
+              "state": "completed",
+              "timestamp": "2025-10-31T23:39:08.277569",
+              "output_path": "/mock/transcript_7270061899243698273.html",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.5,
+                  "text": "The caf\u00e9 au",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 1.5,
+                  "end": 3.0,
+                  "text": "lait was served",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 3.0,
+                  "end": 4.5,
+                  "text": "in a porcelain",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                },
+                {
+                  "start": 4.5,
+                  "end": 5.5,
+                  "text": "demitasse cup.",
+                  "speaker": "Speaker 1",
+                  "confidence": 0.95
+                }
+              ],
+              "model_size": "tiny",
+              "transcription_backend": "mock_whisper",
+              "diarization_backend": "mock_resemblyzer",
+              "error": null
+            },
+            "background": false
+          },
+          "accuracy_score": 1.0,
+          "error_details": null,
+          "actual_transcription": "The caf\u00e9 au lait was served in a porcelain demitasse cup.",
+          "iteration": 1
+        }
+      ],
+      "analysis": {
+        "total_tests": 40,
+        "successful_transcriptions": 40,
+        "average_accuracy": 1.0,
+        "category_performance": {
+          "simple_sentences": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "technical_terms": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "numbers_dates": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "foreign_words": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "voice_performance": {
+          "opentts_espeak_en_us_female": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "opentts_espeak_en_us_male": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "error_patterns": [],
+        "improvement_areas": []
+      },
+      "suggestions": []
+    }
+  ]
+}

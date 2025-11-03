@@ -1,0 +1,16 @@
+{
+  "test_timestamp": 1761968959.0479403,
+  "api_health": {
+    "healthy": false,
+    "endpoints_available": [],
+    "response_times": {}
+  },
+  "test_status": "Failed - API Not Healthy",
+  "error_message": "Speaker API is not running or accessible",
+  "recommendations": [
+    "Start the AudioTranscribe server: python -m app.main --server",
+    "Ensure speaker API is registered",
+    "Check that all speaker fine-tuning dependencies are installed",
+    "Verify meta-recursive system is active"
+  ]
+}

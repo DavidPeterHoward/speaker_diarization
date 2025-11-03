@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  audiotranscribe:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./data:/app/data
+      - ./app:/app/app
+    environment:
+      - PYTHONPATH=/app
+      - AUDIOTRANSCRIBE_DATA_DIR=/app/data
+      - AUDIOTRANSCRIBE_HOST=0.0.0.0
+      - AUDIOTRANSCRIBE_PORT=5000
+    command: python run_server.py --server
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/api/backend-status"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Service for running E2E tests
+  e2e-tests:
+    build: .
+    volumes:
+      - ./tests:/app/tests
+      - ./app:/app/app
+    environment:
+      - PYTHONPATH=/app
+    command: |
+      sh -c "
+        pip install playwright pytest-playwright &&
+        playwright install chromium &&
+        python -m pytest tests/e2e/test_real_backends_e2e.py -v --browser chromium
+      "
+    depends_on:
+      - audiotranscribe
+    profiles:
+      - testing
